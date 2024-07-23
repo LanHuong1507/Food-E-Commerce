@@ -22,9 +22,8 @@ public class FoodService {
         return foodRepository.findAll();
     }
 
-    public ResponseEntity<Food> getFoodById(String id) {
-        Optional<Food> food = foodRepository.findById(id);
-        return food.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.status(HttpStatus.NOT_FOUND).body(null));
+    public Optional<Food> getFoodById(String id) {
+        return foodRepository.findById(id);
     }
 
     public ResponseEntity<String> addFood(Food food) {

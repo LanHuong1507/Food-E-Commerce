@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Optional;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,11 +27,11 @@ import com.example.backend.models.Food;
 import com.example.backend.services.FoodService;
 
 @Controller
-@RequestMapping("/foods")
+@RequestMapping("/api/foods")
 public class FoodController {
 
     @Autowired
-    private FoodService foodService; // Update to FoodService
+    private FoodService foodService; 
 
     private static final String UPLOAD_DIR = "uploads/";
 
@@ -75,6 +76,12 @@ public class FoodController {
     @GetMapping
     public ResponseEntity<Iterable<Food>> getAllFoods() { // Update method name and return type
         return ResponseEntity.ok(foodService.getAllFoods()); // Update to getAllFoods
+    }
+    @GetMapping("/{id}")
+    public ResponseEntity<Food> getFoodById(@PathVariable String id) {
+        Optional<Food> food = foodService.getFoodById(id);
+        return food.map(ResponseEntity::ok)
+                   .orElseGet(() -> ResponseEntity.status(HttpStatus.NOT_FOUND).body(null));
     }
 
     @PutMapping("/{id}")
