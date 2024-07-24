@@ -1,4 +1,4 @@
-package com.example.backend.seeders;
+/*package com.example.backend.seeders;
 
 import com.example.backend.enums.Brand;
 import com.example.backend.enums.FoodCategory;
@@ -153,3 +153,4 @@ public class FoodSeeder implements CommandLineRunner {
     }
     
 }
+*/

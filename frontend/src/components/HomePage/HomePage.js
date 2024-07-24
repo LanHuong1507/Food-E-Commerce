@@ -1,8 +1,10 @@
+// src/pages/HomePage.js
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getFoods, getSuppliers } from '../../api/api';
 import './HomePage.css';
 import { Link } from 'react-router-dom';
+
 const HomePage = () => {
     const [foods, setFoods] = useState([]);
     const [suppliers, setSuppliers] = useState([]);
@@ -41,12 +43,18 @@ const HomePage = () => {
         navigate(`/suppliers/${id}`);
     };
 
+  
+    const handleViewCart = () => {
+        navigate('/carts');
+    };
+
     return (
         <div className="home-page">
             <div className="background-image">
                 <h1>Welcome to the E-commerce App</h1>
             </div>
             <div className="previews">
+                {/* Food and Supplier previews */}
                 <div className="preview-section">
                     <h2>Featured Foods</h2>
                     <div className="preview-container">
@@ -75,9 +83,10 @@ const HomePage = () => {
                         <Link to="/suppliers" className="view-more">View More</Link>
                     </div>
                 </div>
+                <button onClick={handleViewCart} className="view-cart-button">View Cart</button>
             </div>
         </div>
     );
-};
-
+}
 export default HomePage;
+

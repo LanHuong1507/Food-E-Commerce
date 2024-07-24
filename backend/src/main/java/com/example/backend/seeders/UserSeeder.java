@@ -1,4 +1,4 @@
-package com.example.backend.seeders;
+/*package com.example.backend.seeders;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -51,3 +51,4 @@ public class UserSeeder implements CommandLineRunner {
         return roles[random.nextInt(roles.length)];
     }
 }
+*/

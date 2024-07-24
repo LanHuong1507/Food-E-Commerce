@@ -2,6 +2,9 @@ package com.example.backend.models;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import org.springframework.data.mongodb.core.mapping.DBRef;
 
 import lombok.AllArgsConstructor;
@@ -22,6 +25,7 @@ public class CartItem {
     private int quantity;
 
     @DBRef
+    @JsonBackReference
     private Cart cart; // Ensure this is properly defined
 
     public double getDiscountedPrice() {

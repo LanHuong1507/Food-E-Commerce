@@ -1,4 +1,4 @@
-package com.example.backend.seeders;
+/*package com.example.backend.seeders;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -123,3 +123,4 @@ public class CartSeeder implements CommandLineRunner {
         return methods[random.nextInt(methods.length)];
     }
 }
+*/

@@ -15,6 +15,8 @@ import lombok.Setter;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 @Document(collection = "carts")
 @Getter
 @Setter
@@ -25,6 +27,7 @@ public class Cart {
     private String id;
 
     @DBRef
+    @JsonManagedReference
     private List<CartItem> items;
 
     private String userId; 

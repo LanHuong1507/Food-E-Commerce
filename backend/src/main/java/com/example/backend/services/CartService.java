@@ -16,6 +16,9 @@ public class CartService {
     @Autowired
     private CartRepository cartRepository;
 
+    public List<Cart> getAllCarts() {
+        return cartRepository.findAll();
+    }
     // Create or update a cart
     public Cart saveCart(Cart cart) {
         return cartRepository.save(cart);

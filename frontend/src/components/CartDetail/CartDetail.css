@@ -1,0 +1,101 @@
+.cart-detail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.cart-detail-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 1200px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.cart-detail-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.cart-detail-info {
+    margin-bottom: 20px;
+}
+
+.cart-detail-info-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-detail-label {
+    font-weight: bold;
+    color: #555;
+}
+
+.cart-detail-value {
+    color: #333;
+}
+
+.cart-detail-items-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cart-detail-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fafafa;
+    width: calc(33.333% - 20px); /* Three items per row, adjust as needed */
+    box-sizing: border-box;
+    gap: 15px;
+}
+
+.cart-detail-item-image {
+    max-width: 80px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.cart-detail-item-details {
+    flex: 1;
+}
+
+.cart-detail-item-food-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.cart-detail-item-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    color: #666;
+}
+
+.cart-detail-item-label {
+    font-weight: bold;
+}
+
+.cart-detail-item-value {
+    color: #333;
+}
+
+.loading, .error, .no-cart {
+    text-align: center;
+    font-size: 18px;
+}

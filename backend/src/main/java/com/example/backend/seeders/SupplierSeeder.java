@@ -1,4 +1,4 @@
-package com.example.backend.seeders;
+/*package com.example.backend.seeders;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -61,3 +61,4 @@ public class SupplierSeeder implements CommandLineRunner {
         );
     }
 }
+*/

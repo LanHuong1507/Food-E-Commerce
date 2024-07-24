@@ -115,3 +115,25 @@
     text-overflow: ellipsis;
     white-space: nowrap; /* Ensure text is on a single line */
 }
+
+
+.view-cart-button {
+    display: block;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1.5em; /* Increase font size */
+    padding: 15px 0; /* Increase padding */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+    width: 50%; /* Set width to 50% */
+    margin: 20px auto; /* Center button horizontally with auto margin */
+}
+
+.view-cart-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}

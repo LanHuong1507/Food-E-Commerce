@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.Optional;
 
 @RestController
@@ -31,6 +30,7 @@ public class CartController {
         return cart.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
+    
     // Add an item to the cart
     @PostMapping("/{cartId}/items")
     public ResponseEntity<Cart> addItemToCart(@PathVariable String cartId, @RequestBody CartItem cartItem) {
@@ -72,6 +72,16 @@ public class CartController {
             return new ResponseEntity<>(updatedCart, HttpStatus.OK);
         } catch (RuntimeException e) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        }
+    }
+    // Get all carts
+    @GetMapping
+    public ResponseEntity<Iterable<Cart>> getAllCarts() {
+        try {
+            Iterable<Cart> carts = cartService.getAllCarts(); // Ensure this returns Iterable<Cart>
+            return ResponseEntity.ok(carts);
+        } catch (RuntimeException e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
         }
     }
 }
