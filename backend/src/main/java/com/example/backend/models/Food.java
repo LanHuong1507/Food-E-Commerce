@@ -40,4 +40,8 @@ public class Food {
     private Supplier supplier;
 
     private NutritionalInfo nutritionalInfo;
+
+    public double getDiscountedPrice() {
+        return price - (price * discount / 100);
+    }
 }

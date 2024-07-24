@@ -1,7 +1,6 @@
 package com.example.backend.models;
 
-import java.time.LocalDateTime;
-
+import com.example.backend.enums.Role;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -10,22 +9,18 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Document(collection = "suppliers")
+@Document(collection = "users")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Supplier {
+public class User {
     @Id
     private String id;
-    private String name;
+    private String username;
+    private String email;
+    private String password;
+    private Role role; 
     private String phoneNumber;
     private String address;
-    private String email; 
-    private String description; 
-    private String website; 
-    private String category; 
-    private Double rating; 
-    private LocalDateTime createdAt;
-    private LocalDateTime lastUpdated;
 }

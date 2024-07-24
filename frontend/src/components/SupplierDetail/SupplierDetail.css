@@ -1,0 +1,17 @@
+/* In SupplierDetail.css */
+.supplier-detail {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 600px;
+    background-color: #f9f9f9;
+}
+
+.supplier-detail h1 {
+    margin-bottom: 20px;
+}
+
+.supplier-detail p {
+    margin: 10px 0;
+}
